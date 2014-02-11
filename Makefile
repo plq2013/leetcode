@@ -9,7 +9,8 @@ LIB_DIR:=lib
 INCLUDE_DIR:=include
 
 
-TEST_INCLUDE_DIR:=$(INCLUDE_DIR) src contrib/gtest-1.6.0/include
+# using the gtest-1.7.0 
+TEST_INCLUDE_DIR:=$(INCLUDE_DIR) src contrib/gtest-1.7.0/include
 TEST_LIB:=gtest pthread
 
 TEST_INCLUDE_FLAG:=$(foreach d,$(TEST_INCLUDE_DIR),-I$(d))
@@ -23,4 +24,6 @@ endif
 
 include src/Makefile
 include test/Makefile
+
+
 
